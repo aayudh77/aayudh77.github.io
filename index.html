@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Viascope - Content Specialist & Strategist</title>
   <link rel="icon" href="viascope.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="spinner"></div>
+  <!-- Background Floating Shapes -->
+  <div class="background-shapes">
+    <span style="--i:0;"></span>
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:6;"></span>
+    <span style="--i:7;"></span>
   </div>
 
-  <!-- Scroll to Top -->
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <!-- Scroll to Top Button -->
   <button id="scrollTopBtn" title="Go to top">&#8679;</button>
 
   <!-- Navbar -->
@@ -38,8 +48,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content glass">
+  <section id="home" class="hero glass">
+    <div class="hero-content">
       <img src="viascope.png" alt="Viascope Logo" class="hero-logo" />
       <h1>Welcome to Viascope</h1>
       <p class="tagline">Crafting Content That Resonates</p>
@@ -164,5 +174,6 @@
       });
     });
   </script>
+
 </body>
 </html>

@@ -2,88 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aayudh Sapkota | Content Specialist</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viascope – Content Specialist & Strategist</title>
+  <link rel="icon" type="image/png" href="viascope.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
 
-  <header class="landing">
-    <div class="overlay">
-      <div class="intro-box">
-        <img src="favicon.png" alt="Aayudh Icon" class="profile-icon" />
-        <h1>Aayudh Sapkota</h1>
-        <p>
-          <span class="role role1">Content Specialist</span> | 
-          <span class="role role2">Writer</span> | 
-          <span class="role role3">Strategist</span>
-        </p>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button id="scrollTopBtn">&#8679;</button>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="viascope.png" alt="Viascope Logo" />
+        <span>Viascope</span>
       </div>
-      <div class="scroll-mouse" aria-label="Scroll down indicator">
-        <span class="scroll-dot"></span>
-      </div>
-    </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="card" id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I'm Aayudh Sapkota, a passionate content specialist with a knack for storytelling and strategy.
-        I help brands find their voice and connect with their audiences through clear, compelling content.
-      </p>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="viascope.png" alt="Viascope Logo" class="hero-logo" />
+      <h1>Welcome to Viascope</h1>
+      <p class="tagline">Crafting Content That Resonates</p>
+      <a href="#contact" class="cta-btn">Let's Connect</a>
+    </div>
+  </section>
 
-    <section class="card" id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Content Strategy</li>
-        <li>SEO Writing</li>
-        <li>Editing & Proofreading</li>
-        <li>Social Media Management</li>
-      </ul>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Viascope</h2>
+    <p>
+      At Viascope, we believe content is more than words—it’s the voice of your brand.
+      We craft powerful, results-driven strategies that engage audiences and elevate your presence.
+      From high-impact copy to content roadmaps and digital optimization, we blend creativity with strategy to help your brand shine.
+      With expertise in storytelling, trends, and audience behavior, Viascope ensures your content not only speaks but resonates.
+    </p>
+  </section>
 
-    <section class="card" id="projects">
-      <h2>Selected Work</h2>
-      <ul>
-        <li>
-          <a href="https://wealthypeeps.com/author/aayudh/" target="_blank" class="highlight-link" rel="noopener noreferrer">
-            WealthyPeeps \\ Author
-          </a>
-        </li>
-      </ul>
-    </section>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Content Strategy</h3>
+        <p>Data-driven content plans designed to connect with your audience and achieve your goals.</p>
+      </div>
+      <div class="card">
+        <h3>Content Creation</h3>
+        <p>High-impact copywriting and storytelling that amplifies your brand voice.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Optimization</h3>
+        <p>SEO-friendly content and marketing solutions to enhance your digital presence.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="card" id="contact">
-      <h2>Contact</h2>
-      <p>Let’s collaborate! Reach out via email or connect with me on LinkedIn.</p>
-      <ul>
-        <li>Email: <a href="mailto:contactviascope@gmail.com" class="highlight-link">sapkotaaayudh2@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank" class="highlight-link" rel="noopener noreferrer">linkedin.com/as</a></li>
-      </ul>
-    </section>
-  </main>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-gallery">
+      <div class="portfolio-item">Project 1</div>
+      <div class="portfolio-item">Project 2</div>
+      <div class="portfolio-item">Project 3</div>
+      <div class="portfolio-item">Project 4</div>
+    </div>
+  </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>"Viascope transformed our brand voice and increased engagement drastically."</p>
+        <span>- Client A</span>
+      </div>
+      <div class="testimonial">
+        <p>"A brilliant strategist and content creator. Highly recommended!"</p>
+        <span>- Client B</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:contactviascope@gmail.com">contactviascope@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/9779766554524">9766554524</a></p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Aayudh Sapkota. All rights reserved.</p>
+    <p>&copy; 2025 Viascope. All rights reserved.</p>
   </footer>
 
-  <button id="backToTop" aria-label="Back to top">↑</button>
-
   <script>
-    // Back to top button functionality
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Preloader
+    window.onload = function () {
+      document.getElementById("preloader").style.display = "none";
+    };
+
+    // Scroll-to-top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 </body>

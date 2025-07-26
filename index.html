@@ -16,7 +16,7 @@
         <img src="favicon.png" alt="Aayudh Icon" class="profile-icon" />
         <h1>Aayudh Sapkota</h1>
         <p>Content Specialist | Writer | Strategist</p>
-        <!-- Scroll Button -->
+        <!-- Scroll Down Button -->
         <a href="#about" class="scroll-btn">
           <span></span>
         </a>
@@ -60,6 +60,26 @@
   <footer>
     <p>&copy; 2025 Aayudh Sapkota. All rights reserved.</p>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <script>
+    // Show "Back to Top" button on scroll
+    const backToTop = document.getElementById('backToTop');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    };
+
+    // Scroll to top on button click
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>

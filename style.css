@@ -1,7 +1,7 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* Root Variables for easy theming */
+/* Root Variables */
 :root {
   --primary: #1e3c72;
   --secondary: #2a5298;
@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
@@ -27,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Header with full-screen background */
+/* Header */
 header {
   background: url('background.jpeg') no-repeat center center/cover;
   height: 100vh;
@@ -48,6 +52,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .header-content h1 {
@@ -76,7 +81,45 @@ header {
   transform: scale(1.1);
 }
 
-/* Main content */
+/* Scroll Button */
+.scroll-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 60px;
+  border: 2px solid #0ff;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.scroll-btn:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.scroll-btn span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #0ff;
+  border-radius: 50%;
+  animation: scrollAnim 1.5s infinite;
+  margin-top: 8px;
+}
+
+@keyframes scrollAnim {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Container */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -135,7 +178,28 @@ footer {
   margin-top: 60px;
 }
 
-/* Keyframes */
+/* Back to Top Button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transition: transform 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -143,10 +207,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-  header p {
-    font-size: 1rem;
-  }
+  header h1 { font-size: 2.2rem; }
+  header p { font-size: 1rem; }
 }

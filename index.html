@@ -2,35 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aayudh Sapkota | Content Specialist</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
 
-  <header>
+  <header class="landing">
     <div class="overlay">
-      <div class="header-content">
+      <div class="intro-box">
         <img src="favicon.png" alt="Aayudh Icon" class="profile-icon" />
         <h1>Aayudh Sapkota</h1>
-        <p>Content Specialist | Writer | Strategist</p>
-        <!-- Scroll Down Button -->
-        <a href="#about" class="scroll-btn">
-          <span></span>
-        </a>
+        <p>
+          <span class="role role1">Content Specialist</span> | 
+          <span class="role role2">Writer</span> | 
+          <span class="role role3">Strategist</span>
+        </p>
+      </div>
+      <div class="scroll-mouse" aria-label="Scroll down indicator">
+        <span class="scroll-dot"></span>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section id="about" class="glass-card">
+    <section class="card" id="about">
       <h2>About Me</h2>
-      <p>Hello! I'm Aayudh Sapkota, a passionate content specialist with a knack for storytelling and strategy. I help brands find their voice and connect with their audiences through clear, compelling content.</p>
+      <p>
+        Hello! I'm Aayudh Sapkota, a passionate content specialist with a knack for storytelling and strategy.
+        I help brands find their voice and connect with their audiences through clear, compelling content.
+      </p>
     </section>
 
-    <section id="skills" class="glass-card">
+    <section class="card" id="skills">
       <h2>Skills</h2>
       <ul>
         <li>Content Strategy</li>
@@ -40,19 +49,23 @@
       </ul>
     </section>
 
-    <section id="projects" class="glass-card">
+    <section class="card" id="projects">
       <h2>Selected Work</h2>
       <ul>
-        <li><a href="https://wealthypeeps.com/author/aayudh/" target="_blank">WealthyPeeps \\ Author \\ </a></li>
+        <li>
+          <a href="https://wealthypeeps.com/author/aayudh/" target="_blank" class="highlight-link" rel="noopener noreferrer">
+            WealthyPeeps \\ Author
+          </a>
+        </li>
       </ul>
     </section>
 
-    <section id="contact" class="glass-card">
+    <section class="card" id="contact">
       <h2>Contact</h2>
       <p>Let’s collaborate! Reach out via email or connect with me on LinkedIn.</p>
       <ul>
-        <li>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sapkotaaayudh2@gmail.com" target="_blank">sapkotaaayudh2@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank">linkedin.com/as</a></li>
+        <li>Email: <a href="mailto:sapkotaaayudh2@gmail.com" class="highlight-link">sapkotaaayudh2@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/aayudh-sapkota-70a333283/" target="_blank" class="highlight-link" rel="noopener noreferrer">linkedin.com/as</a></li>
       </ul>
     </section>
   </main>
@@ -61,25 +74,17 @@
     <p>&copy; 2025 Aayudh Sapkota. All rights reserved.</p>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to Top">↑</button>
+  <button id="backToTop" aria-label="Back to top">↑</button>
 
   <script>
-    // Show "Back to Top" button on scroll
+    // Back to top button functionality
     const backToTop = document.getElementById('backToTop');
-    window.onscroll = function() {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
-    };
-
-    // Scroll to top on button click
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    });
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
-
 </body>
 </html>

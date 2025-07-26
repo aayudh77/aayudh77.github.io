@@ -1,7 +1,18 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* Reset and base styles */
+/* Root Variables for easy theming */
+:root {
+  --primary: #1e3c72;
+  --secondary: #2a5298;
+  --light: #ffffff;
+  --dark: #1a1a1a;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --text-color: #f0f0f0;
+  --transition: all 0.3s ease;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,61 +21,91 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f7f9fc;
-  color: #333;
+  background-color: var(--dark);
+  color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Header with local background image */
+/* Header with full-screen background */
 header {
   background: url('background.jpeg') no-repeat center center/cover;
-  height: 60vh;
+  height: 100vh;
   position: relative;
-  color: white;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-.header-content {
-  text-align: center;
-  padding: 20px;
-}
-
-header h1 {
+.header-content h1 {
   font-size: 3rem;
   font-weight: 700;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
-header p {
+.header-content p {
   font-size: 1.2rem;
-  font-weight: 300;
   margin-top: 10px;
+  opacity: 0.9;
+}
+
+.profile-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #0ff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
 }
 
 /* Main content */
 .container {
   width: 90%;
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 1000px;
+  margin: 60px auto;
+  display: grid;
+  gap: 40px;
 }
 
-section {
-  margin-bottom: 40px;
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
 }
 
 h2 {
-  color: #004080;
+  color: #0ff;
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 1.8rem;
-  border-left: 5px solid #004080;
+  border-left: 5px solid #0ff;
   padding-left: 10px;
 }
 
@@ -74,19 +115,19 @@ ul {
 }
 
 a {
-  color: #0066cc;
+  color: #0ff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #003366;
+  color: #fff;
   text-decoration: underline;
 }
 
 /* Footer */
 footer {
-  background-color: #222;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
   color: white;
   text-align: center;
   padding: 20px;
@@ -94,17 +135,18 @@ footer {
   margin-top: 60px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
   header p {
     font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
   }
 }
